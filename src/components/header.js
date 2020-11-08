@@ -47,7 +47,7 @@ export default class Header extends Component {
                   <li>
                     <Link to="/#home">Home</Link>
                   </li>
-                  {data.menus
+                  {/*data.menus
                     .filter(item => item === "About")
                     .map(t => {
                       return (
@@ -55,13 +55,13 @@ export default class Header extends Component {
                           <Link to={`/#About`}>About</Link>
                         </li>
                       );
-                    })}
+                    })*/}
                   {data.menus
                     .filter(item => item === "Service")
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`/#Service`}>Service</Link>
+                          <Link to={`/#Service`}>Prestations</Link>
                         </li>
                       );
                     })}
@@ -75,7 +75,7 @@ export default class Header extends Component {
                       );
                     })}
 
-                  {data.menus
+                  {/*data.menus
                     .filter(item => item === "Work")
                     .map(t => {
                       return (
@@ -83,13 +83,13 @@ export default class Header extends Component {
                           <Link to={`/#Work`}>Work</Link>
                         </li>
                       );
-                    })}
+                    })*/}
                   {data.menus
                     .filter(item => item === "Testimonials")
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`/#Testimonials`}>Testimonials</Link>
+                          <Link to={`/#Testimonials`}>Skippers</Link>
                         </li>
                       );
                     })}
@@ -102,7 +102,7 @@ export default class Header extends Component {
                         </li>
                       );
                     })}
-                  {data.menus
+                  {/*data.menus
                     .filter(item => item === "Contact")
                     .map(t => {
                       return (
@@ -110,7 +110,7 @@ export default class Header extends Component {
                           <Link to={`/#Contact`}>Contact</Link>
                         </li>
                       );
-                    })}
+                    })*/}
                 </ul>
               </div>
             ) : (

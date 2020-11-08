@@ -8,19 +8,19 @@ export default class Banner extends Component {
       <div className="banner">
         <Img
           fixed={data.bannerImage.fluid}
-          objectFit="cover"
-          objectPosition="50% 50%"
+          objectFit="scale-down"
+          objectPosition="10% 50%"
         />
         <div className="container">
           <div className="banner-details">
-            <span>Hello...</span>
-            <h1>I'm {data.designation}.</h1>
+            <span>Pôle Mini</span>
+            <h1>La Rochelle</h1>
             <ul className="sub-data">
               {data.bannerList.map((item, index) => {
                 return <li key={index}>{item}</li>;
               })}
             </ul>
-            <ul className="social">
+            {/* <ul className="social">
               <li>
                 <a
                   className="fab fa-facebook-f"
@@ -61,7 +61,7 @@ export default class Banner extends Component {
                   rel="noopener noreferrer"
                 ></a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

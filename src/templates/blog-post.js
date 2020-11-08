@@ -33,7 +33,7 @@ export default class blogPost extends Component {
         <SEO
           title={data.title}
           keywords={[
-            `Rohit Gupta`,
+            `Pole Mini La Rochelle`,
             `Frontend Developer`,
             `Developer`,
             `${data.title}`
@@ -64,7 +64,7 @@ export default class blogPost extends Component {
                 }}
               />
             </div>
-            <Share
+            {/* <Share
               socialConfig={{
                 ...socialConfigss.site.siteMetadata.twiteerhandletitle,
                 config: {
@@ -72,11 +72,11 @@ export default class blogPost extends Component {
                   title: `${socialConfigss.title}`
                 }
               }}
-            />
-            <DiscussionEmbed
+            /> */}
+            {/* <DiscussionEmbed
               shortname={disqusShortname}
               config={disqusConfig}
-            />
+            /> */}
           </div>
         </div>
       </Layout>
