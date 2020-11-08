@@ -15,11 +15,11 @@ export default class Banner extends Component {
           <div className="banner-details">
             <span>Pôle Mini</span>
             <h1>La Rochelle</h1>
-            <ul className="sub-data">
+            {/* <ul className="sub-data">
               {data.bannerList.map((item, index) => {
                 return <li key={index}>{item}</li>;
               })}
-            </ul>
+            </ul> */}
             {/* <ul className="social">
               <li>
                 <a
