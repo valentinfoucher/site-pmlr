@@ -5,27 +5,27 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 import Banner from "../components/banner";
-import About from "../components/about";
+import Coach from "../components/coach";
 import Service from "../components/service";
 import Work from "../components/work";
 import Blogs from "../components/blogs";
-import Testimonial from "../components/testimonial";
+import Skipper from "../components/skipper";
 import Contact from "../components/contact";
 import Photos from "../components/photos";
 
 const IndexPage = ({ data }) => (
   <Layout header="home">
     <SEO
-      title={data.contentfulAboutMe.designation}
+      title={data.contentfulCoach.designation}
       keywords={[`Pole Mini La Rochelle`, `Frontend Developer`, `Developer`]}
     />
-    <Banner data={data.contentfulAboutMe}></Banner>
+    <Banner data={data.contentfulCoach}></Banner>
 
-    {/*data.contentfulSiteInformation.menus
-      .filter(item => item === "About")
+    {data.contentfulSiteInformation.menus
+      .filter(item => item === "Coach")
       .map(t => {
-        return <About data={data.contentfulAboutMe}></About>;
-      })*/}
+        return <Coach data={data.contentfulCoach}></Coach>;
+      })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Service")
@@ -46,10 +46,10 @@ const IndexPage = ({ data }) => (
       })*/}
 
     {data.contentfulSiteInformation.menus
-      .filter(item => item === "Testimonials")
+      .filter(item => item === "Skippers")
       .map(t => {
         return (
-          <Testimonial data={data.allContentfulTestimonials}></Testimonial>
+          <Skipper data={data.allContentfulSkippers}></Skipper>
         );
       })}
 
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => (
     {/*data.contentfulSiteInformation.menus
       .filter(item => item === "Contact")
       .map(t => {
-        return <Contact data={data.contentfulAboutMe.gmail}></Contact>;
+        return <Contact data={data.contentfulCoach.gmail}></Contact>;
       })*/}
   </Layout>
 );
@@ -71,7 +71,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query AboutQuery {
-    contentfulAboutMe {
+    contentfulCoach {
       name
       photo {
         file {
@@ -88,7 +88,6 @@ export const pageQuery = graphql`
         }
       }
       designation
-      age
       facebook
       github
       gmail
@@ -147,7 +146,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulTestimonials {
+    allContentfulSkippers {
       edges {
         node {
           name
@@ -159,25 +158,6 @@ export const pageQuery = graphql`
           }
           avatarImage {
             fluid(maxWidth: 200) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
-            }
-          }
-        }
-      }
-    }
-    allContentfulWorks {
-      edges {
-        node {
-          siteName
-          url
-          image {
-            fluid(maxWidth: 600) {
               base64
               aspectRatio
               src

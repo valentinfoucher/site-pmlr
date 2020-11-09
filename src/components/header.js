@@ -47,15 +47,15 @@ export default class Header extends Component {
                   <li>
                     <Link to="/#home">Home</Link>
                   </li>
-                  {/*data.menus
-                    .filter(item => item === "About")
+                  {data.menus
+                    .filter(item => item === "Coach")
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`/#About`}>About</Link>
+                          <Link to={`/#Coach`}>Julien Pulvé</Link>
                         </li>
                       );
-                    })*/}
+                    })}
                   {data.menus
                     .filter(item => item === "Service")
                     .map(t => {
@@ -85,11 +85,11 @@ export default class Header extends Component {
                       );
                     })*/}
                   {data.menus
-                    .filter(item => item === "Testimonials")
+                    .filter(item => item === "Skippers")
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`/#Testimonials`}>Skippers</Link>
+                          <Link to={`/#Skippers`}>Skippers</Link>
                         </li>
                       );
                     })}
