@@ -39,7 +39,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#333`,
-        icon: `src/images/LOGO_PMLR3.png` // This path is relative to the root of the site.
+        icon: `src/images/LOGO_PMLR_COULEUR_N_B.jpg` // This path is relative to the root of the site.
       }
     }, // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
     `gatsby-plugin-offline`
